@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        include stylesheets.pug
+    body
+        h1.display-1.font-weight-light.text-center Users
+        each user in users
+            .card.text-white.bg-dark.mb-3.container(style='max-width: 20rem; margin-left:2rem')
+                .card-body
+                    h4.card-title #{user.name}
+                    p.card-text
+                    | Age:&nbsp; #{user.age}
+                    p.card-text 
+                    | Favourite Foods:&nbsp; #{user.favouriteFoods}
+                    
